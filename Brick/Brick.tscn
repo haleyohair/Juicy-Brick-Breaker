@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=5 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c3ty6fw85npc5" path="res://Assets/lightblue.png" id="2_8gvyb"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(90, 30)
+
+[sub_resource type="Curve" id="Curve_lgvgy"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 360), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Brick" type="StaticBody2D"]
 script = ExtResource("1")
@@ -16,3 +23,16 @@ offset_bottom = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="Blue" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+one_shot = true
+speed_scale = 2.6
+explosiveness = 0.5
+texture = ExtResource("2_8gvyb")
+initial_velocity_min = 40.0
+initial_velocity_max = 50.0
+angular_velocity_min = 180.0
+angular_velocity_max = 200.0
+angular_velocity_curve = SubResource("Curve_lgvgy")

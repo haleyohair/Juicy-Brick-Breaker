@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmwf8wjdir6y5"]
+[gd_scene load_steps=5 format=3 uid="uid://dmwf8wjdir6y5"]
 
 [ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bm0mffq36vkbe" path="res://Assets/heart.png" id="2_gtpav"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(100, 20)
+
+[sub_resource type="Curve" id="Curve_5pe3a"]
+min_value = -1.0
+_data = [Vector2(0, 0.931727), 0.0, 0.0, 0, 0, Vector2(0.973064, -0.921139), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Paddle" type="CharacterBody2D"]
 script = ExtResource("1")
@@ -13,9 +19,22 @@ offset_left = -50.0
 offset_top = -10.0
 offset_right = 50.0
 offset_bottom = 10.0
+color = Color(0.839216, 0.443137, 0.768627, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("1")
 
 [node name="Powerups" type="Node2D" parent="."]
+
+[node name="Heart" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 4
+one_shot = true
+speed_scale = 2.0
+texture = ExtResource("2_gtpav")
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+hue_variation_min = 0.5
+hue_variation_max = 0.5
+hue_variation_curve = SubResource("Curve_5pe3a")
