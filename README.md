@@ -1,5 +1,4 @@
-# Project Name
-Project 3, Part 1—Assets and Particles
+# Project 3, Part 1—Assets and Particles
 9/28/23
 A crazy breakout game
 
