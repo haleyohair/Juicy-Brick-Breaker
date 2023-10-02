@@ -37,7 +37,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if dying and not $Blue.emitting:
+	if dying and not $Blue.emitting and not tween:
 		queue_free()
 
 func hit(_ball):
@@ -47,7 +47,6 @@ func die():
 	dying = true
 	collision_layer = 0
 	$Blue.emitting=true
-	$ColorRect.hide()
 	Global.update_score(score)
 	if not Global.feverish:
 		Global.update_fever(score)

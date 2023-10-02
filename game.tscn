@@ -12,10 +12,10 @@
 [ext_resource type="Script" path="res://Camera2D.gd" id="10_3i4e3"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(200, 1000)
+size = Vector2(208, 992)
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(1224, 200)
+size = Vector2(1224, 210)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("4")
@@ -26,6 +26,10 @@ script = ExtResource("4")
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Left"]
+offset_left = -182.0
+offset_top = -92.0
+offset_right = 18.0
+offset_bottom = 904.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Left"]
 position = Vector2(-90, 400)
@@ -36,6 +40,9 @@ position = Vector2(1152, 2.08165e-12)
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Right"]
+offset_top = -90.0
+offset_right = 200.0
+offset_bottom = 910.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Right"]
 position = Vector2(90, 400)
@@ -45,9 +52,13 @@ shape = SubResource("1")
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Top"]
+offset_left = -33.0
+offset_top = -210.0
+offset_right = 1191.0
+offset_bottom = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Top"]
-position = Vector2(512, -90)
+position = Vector2(581, -105)
 shape = SubResource("2")
 
 [node name="Brick_Container" type="Node2D" parent="."]
@@ -80,7 +91,7 @@ visible = false
 [node name="Instructions" parent="UI" instance=ExtResource("8")]
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(576, 402)
+position = Vector2(576, 400)
 script = ExtResource("10_3i4e3")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]
