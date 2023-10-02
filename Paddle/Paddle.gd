@@ -5,9 +5,10 @@ var speed = 10.0
 var width = 0
 var width_default = 0
 var decay = 0.02
+var tween
+
 
 func _ready():
-	width = $CollisionShape2D.get_shape().size.x
 	width_default = width
 	target = Vector2(Global.VP.x / 2, Global.VP.y - 80)
 
@@ -23,6 +24,7 @@ func _input(event):
 
 func hit(_ball):
 	$Heart.emitting=true
+	
 
 func powerup(payload):
 	for c in $Powerups.get_children():

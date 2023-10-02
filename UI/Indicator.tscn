@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://dywcp8o4vsibs"]
+[gd_scene load_steps=2 format=3 uid="uid://dywcp8o4vsibs"]
+
+[ext_resource type="Texture2D" uid="uid://pveeffrdy062" path="res://Assets/purple.png" id="1_tmv1e"]
 
 [node name="Indicator" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 10.0
-offset_bottom = 10.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmv1e")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.521569, 1, 1, 1)
+texture = ExtResource("1_tmv1e")
