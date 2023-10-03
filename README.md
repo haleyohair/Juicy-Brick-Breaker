@@ -5,7 +5,7 @@ A crazy breakout game
 
 ## Implementation
 
-I included different themes, icons, and particles. When the ball hits the paddle, hearts come out of it. When the ball hits a brick, balls come out of it. I changed the color of the bricks and took some out in the first level.
+I included different themes, icons, and particles. When the ball hits the paddle, hearts come out of it. When the ball hits a brick, balls come out of it. I changed the color of the bricks and took some out in the first level. When the ball hits the side of the wall it turns pink. The bricks fall into place once the game has started. The ball itself reacts when it hits a brick, the paddle, or the walls.
 
 
 ## References
