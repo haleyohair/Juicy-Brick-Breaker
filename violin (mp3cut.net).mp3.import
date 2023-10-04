@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5ugmko5ivxpp"
+path="res://.godot/imported/violin (mp3cut.net).mp3-ee2fccb6552f40986b631b0e205dc847.mp3str"
+
+[deps]
+
+source_file="res://violin (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/violin (mp3cut.net).mp3-ee2fccb6552f40986b631b0e205dc847.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5hv6e0ku13ti"
+path="res://.godot/imported/flute (mp3cut.net).mp3-df83d8a1807100176461beb4426b7c3b.mp3str"
+
+[deps]
+
+source_file="res://Assets/flute (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/flute (mp3cut.net).mp3-df83d8a1807100176461beb4426b7c3b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

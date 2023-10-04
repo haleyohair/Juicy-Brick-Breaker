@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ei3ny6s8bla5"]
+[gd_scene load_steps=6 format=3 uid="uid://ei3ny6s8bla5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://b63qh3k1kwuer" path="res://Assets/Kenney Blocks.ttf" id="2_hyssj"]
 [ext_resource type="FontFile" uid="uid://deao6x55f41dr" path="res://Assets/Kenney High.ttf" id="3_e10y7"]
+[ext_resource type="AudioStream" uid="uid://b5hv6e0ku13ti" path="res://Assets/flute (mp3cut.net).mp3" id="4_lickw"]
 
 [sub_resource type="Theme" id="Theme_nyluu"]
 default_font = ExtResource("2_hyssj")
@@ -75,6 +76,10 @@ theme_override_colors/font_hover_color = Color(0.764706, 0.541176, 0.92549, 1)
 theme_override_fonts/font = ExtResource("3_e10y7")
 theme_override_font_sizes/font_size = 35
 text = "Quit"
+
+[node name="Main_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lickw")
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

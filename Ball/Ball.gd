@@ -14,6 +14,7 @@ var wobble_direction = Vector2.ZERO
 var decay_wobble = 0.30
 
 var distort_effect = 0.0002
+var h_rotate = 0.0
 
 var released = true
 
@@ -71,13 +72,16 @@ func _integrate_forces(state):
 		state.linear_velocity = state.linear_velocity.normalized() * max_speed * speed_multiplier
 
 func change_size(s):
-	$Images/Sprite2D/Highlight.scale = s
+	$Images/Sprite2D.scale = s
+	$Images/Highlight.scale = s
 	$CollisionShape2D.scale = s
 
 func change_speed(s):
 	speed_multiplier = s
 
 func die():
+	var die_sound=get_node("/root/Game/Die_Sound")
+	die_sound.play()
 	queue_free()
 	
 func wobble():
