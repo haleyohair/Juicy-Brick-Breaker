@@ -19,6 +19,9 @@ Sound effects recorded in [Audacity 3.3.3](https://www.audacityteam.org/)
 
 Music and Sound effects cut using https://mp3cut.net/
 
+Shaders:
+[Night Sky 2D effect by zuwiwano] (https://godotshaders.com/shader/night-sky-2d/)
+
 ## Future Development
 
 
