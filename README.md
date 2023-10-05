@@ -21,8 +21,6 @@ Music and Sound effects cut using https://mp3cut.net/
 
 Shader used: [Night Sky 2D effect by zuwiwano](https://godotshaders.com/shader/night-sky-2d/)
 
-Particles made in 
-
 ## Future Development
 
 
