@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmwf8wjdir6y5"]
+[gd_scene load_steps=8 format=3 uid="uid://dmwf8wjdir6y5"]
 
 [ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://2tljsnolope0" path="res://Assets/bluep.png" id="2_7cutu"]
 [ext_resource type="Texture2D" uid="uid://bm0mffq36vkbe" path="res://Assets/heart.png" id="2_gtpav"]
+[ext_resource type="Texture2D" uid="uid://dv6vm8ybp8ve6" path="res://Assets/eye.png" id="4_mpiqf"]
+[ext_resource type="Texture2D" uid="uid://cn8ko337475is" path="res://Assets/Pupil.png" id="5_7jpdn"]
+[ext_resource type="Texture2D" uid="uid://bhpgyuvui0viw" path="res://Assets/mouth.png" id="6_wcq66"]
 
 [sub_resource type="Curve" id="Curve_5pe3a"]
 min_value = -1.0
@@ -35,3 +38,25 @@ initial_velocity_max = 500.0
 hue_variation_min = 0.5
 hue_variation_max = 0.5
 hue_variation_curve = SubResource("Curve_5pe3a")
+
+[node name="Eye1" type="Sprite2D" parent="."]
+position = Vector2(33, -7)
+texture = ExtResource("4_mpiqf")
+
+[node name="Pupil" type="Sprite2D" parent="Eye1"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye1/Pupil"]
+texture = ExtResource("5_7jpdn")
+
+[node name="Eye2" type="Sprite2D" parent="."]
+position = Vector2(-33, -7)
+texture = ExtResource("4_mpiqf")
+
+[node name="Pupil" type="Sprite2D" parent="Eye2"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye2/Pupil"]
+texture = ExtResource("5_7jpdn")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+position = Vector2(0, 20)
+texture = ExtResource("6_wcq66")
